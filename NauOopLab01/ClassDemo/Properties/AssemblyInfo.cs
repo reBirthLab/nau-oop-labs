@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NauOopLab01")]
+[assembly: AssemblyTitle("ClassDemo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NauOopLab01")]
+[assembly: AssemblyProduct("ClassDemo")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5ffee274-08ba-41d5-b286-409aee36ac12")]
+[assembly: Guid("bddefae5-9cb2-41e4-aa1c-fd431cd472a9")]
 
 // Version information for an assembly consists of the following four values:
 //
