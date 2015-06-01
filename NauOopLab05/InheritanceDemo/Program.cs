@@ -8,19 +8,24 @@ namespace InheritanceDemo
 {
     class Program
     {
-        string s = "khjfdhk";
-        public int Length
-        {
-            get
-            {
-                return s.Length;
-            }
-        }
         static void Main(string[] args)
         {
-            Program sd = new Program();
+            Segment seg1 = new Segment(0, 0, 23, -5);
+            Segment seg2 = new Segment(-5, -5, 20, 10);
 
-            Console.WriteLine(sd.Length);
+            Console.WriteLine("SEGMENT 1");
+            seg1.printData();
+
+            Console.WriteLine("SEGMENT 1 (5 units shorter)");
+            seg1.makeFiveUnitsShorter();
+            seg1.printData();
+
+            Console.WriteLine("SEGMENT 2");
+            seg2.printData();
+
+            Console.WriteLine("SEGMENT 2 (5 units shorter)");
+            seg2.makeFiveUnitsShorter();
+            seg2.printData();
 
             Console.Read();
         }
