@@ -13,7 +13,7 @@ namespace InheritanceDemo
 
     class Line
     {
-        private Vertex[] vertex;
+        protected Vertex[] vertex;
 
         public Line(int x1, int y1, int x2, int y2)
         {
