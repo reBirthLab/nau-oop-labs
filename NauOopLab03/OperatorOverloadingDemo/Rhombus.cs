@@ -19,7 +19,7 @@ namespace OperatorOverloadingDemo
         private int diagonalBD;
 
         // Default constructor
-        public Rhombus():this(0,0,12,25)
+        public Rhombus() : this(0, 0, 12, 25)
         {
         }
 
@@ -78,13 +78,73 @@ namespace OperatorOverloadingDemo
         // Prints length of rhombus edge
         public void printEdgeLength()
         {
-            Console.WriteLine("Length of rhombus edge AB is {0} units.\n", Math.Round(edgeA, 2)); 
+            Console.WriteLine("Length of rhombus edge AB is {0} units.\n", Math.Round(edgeA, 2));
         }
 
         // Prints length of rhombus diagonals
         public void printDiagonalsLength()
         {
             Console.WriteLine("Length of rhombus diagonals: AC ({0}), BD ({1}) units.\n", diagonalAC, diagonalBD);
+        }
+
+        // Addition overloading
+        public static Rhombus operator *(Rhombus r1, int n)
+        {
+            Rhombus resR = new Rhombus();
+            resR.vertex[0].x = r1.vertex[0].x * n;
+            resR.vertex[0].y = r1.vertex[0].y * n;
+            resR.vertex[1].x = r1.vertex[1].x * n;
+            resR.vertex[1].y = r1.vertex[1].y * n;
+            resR.vertex[2].x = r1.vertex[2].x * n;
+            resR.vertex[2].y = r1.vertex[2].y * n;
+            resR.vertex[3].x = r1.vertex[3].x * n;
+            resR.vertex[3].y = r1.vertex[3].y * n;
+
+            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[2].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2)); ;
+            resR.diagonalAC = Math.Abs(resR.vertex[0].x - resR.vertex[2].x);
+            resR.diagonalBD = Math.Abs(resR.vertex[1].y - resR.vertex[3].y);
+
+            return resR;
+        }
+
+        public static Rhombus operator *(int n, Rhombus r1)
+        {
+            Rhombus resR = new Rhombus();
+            resR.vertex[0].x = r1.vertex[0].x * n;
+            resR.vertex[0].y = r1.vertex[0].y * n;
+            resR.vertex[1].x = r1.vertex[1].x * n;
+            resR.vertex[1].y = r1.vertex[1].y * n;
+            resR.vertex[2].x = r1.vertex[2].x * n;
+            resR.vertex[2].y = r1.vertex[2].y * n;
+            resR.vertex[3].x = r1.vertex[3].x * n;
+            resR.vertex[3].y = r1.vertex[3].y * n;
+
+            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[2].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2)); ;
+            resR.diagonalAC = Math.Abs(resR.vertex[0].x - resR.vertex[2].x);
+            resR.diagonalBD = Math.Abs(resR.vertex[1].y - resR.vertex[3].y);
+
+            return resR;
+        }
+
+        // Substruction overloading
+        public static Rhombus operator -(Rhombus r1, Rhombus r2)
+        {
+            Rhombus resR = new Rhombus();
+            resR.vertex[0].x = r1.vertex[0].x - r2.vertex[0].x;
+            resR.vertex[0].y = r1.vertex[0].y - r2.vertex[0].y;
+            resR.vertex[1].x = r1.vertex[1].x - r2.vertex[1].x;
+            resR.vertex[1].y = r1.vertex[1].y - r2.vertex[1].y;
+            resR.vertex[2].x = r1.vertex[2].x - r2.vertex[2].x;
+            resR.vertex[2].y = r1.vertex[2].y - r2.vertex[2].y;
+            resR.vertex[3].x = r1.vertex[3].x - r2.vertex[3].x;
+            resR.vertex[3].y = r1.vertex[3].y - r2.vertex[3].y;
+
+            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[2].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2)); ;
+            resR.diagonalAC = Math.Abs(resR.vertex[0].x - resR.vertex[2].x);
+            resR.diagonalBD = Math.Abs(resR.vertex[1].y - resR.vertex[3].y);
+
+
+            return resR;
         }
     }
 }
