@@ -36,7 +36,7 @@ namespace OperatorOverloadingDemo
             vertex[3].x = x2;
             vertex[3].y = y2 - Math.Abs((y1 - y2) * 2);
 
-            edgeA = Math.Sqrt(Math.Pow((vertex[0].x - vertex[2].x), 2) + Math.Pow((vertex[0].y - vertex[1].y), 2)); ;
+            edgeA = Math.Sqrt(Math.Pow((vertex[0].x - vertex[1].x), 2) + Math.Pow((vertex[0].y - vertex[1].y), 2));
             diagonalAC = Math.Abs(vertex[0].x - vertex[2].x);
             diagonalBD = Math.Abs(vertex[1].y - vertex[3].y);
         }
@@ -100,7 +100,7 @@ namespace OperatorOverloadingDemo
             resR.vertex[3].x = r1.vertex[3].x * n;
             resR.vertex[3].y = r1.vertex[3].y * n;
 
-            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[2].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2)); ;
+            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[1].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2));
             resR.diagonalAC = Math.Abs(resR.vertex[0].x - resR.vertex[2].x);
             resR.diagonalBD = Math.Abs(resR.vertex[1].y - resR.vertex[3].y);
 
@@ -119,7 +119,7 @@ namespace OperatorOverloadingDemo
             resR.vertex[3].x = r1.vertex[3].x * n;
             resR.vertex[3].y = r1.vertex[3].y * n;
 
-            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[2].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2)); ;
+            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[1].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2));
             resR.diagonalAC = Math.Abs(resR.vertex[0].x - resR.vertex[2].x);
             resR.diagonalBD = Math.Abs(resR.vertex[1].y - resR.vertex[3].y);
 
@@ -139,7 +139,7 @@ namespace OperatorOverloadingDemo
             resR.vertex[3].x = r1.vertex[3].x - r2.vertex[3].x;
             resR.vertex[3].y = r1.vertex[3].y - r2.vertex[3].y;
 
-            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[2].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2)); ;
+            resR.edgeA = Math.Sqrt(Math.Pow((resR.vertex[0].x - resR.vertex[1].x), 2) + Math.Pow((resR.vertex[0].y - resR.vertex[1].y), 2));
             resR.diagonalAC = Math.Abs(resR.vertex[0].x - resR.vertex[2].x);
             resR.diagonalBD = Math.Abs(resR.vertex[1].y - resR.vertex[3].y);
 
