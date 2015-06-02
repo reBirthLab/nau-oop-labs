@@ -8,16 +8,14 @@ namespace PolymorphismDemo
 {
     class Strings
     {
-        protected String str;
-
-        public Strings(String str)
+        public virtual void getLength()
         {
-            this.str = str;
+            Console.WriteLine("getLength method of parent class.");
         }
 
-        public virtual int length()
+        public virtual void moveSymbols()
         {
-            return str.Length;
+            Console.WriteLine("moveSymbols method of parent class.");
         }
     }
 }
