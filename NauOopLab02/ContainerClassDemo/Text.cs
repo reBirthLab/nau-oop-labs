@@ -44,7 +44,7 @@ namespace NauOopLab2
         {
             if (rowNumber < 0 || rowNumber >= emptyRow)
             {
-                Console.WriteLine("There is no Row " + rowNumber + " in the text.");
+                Console.WriteLine("There is no Row {0} in the text.", rowNumber);
             } else
             {
                 for (int i = rowNumber; i < emptyRow - 1; i++)
@@ -54,8 +54,7 @@ namespace NauOopLab2
 
                 emptyRow--;
 
-                Console.WriteLine("Row " + rowNumber 
-                    + " (\"" + text[rowNumber].getContent() +"\") was successfully deleted!");
+                Console.WriteLine("Row {0} (\"{1}\") was successfully deleted!", rowNumber, text[rowNumber].getContent());
             }
         }
 
@@ -81,7 +80,7 @@ namespace NauOopLab2
         {
             int matchesCounter = 0;
 
-            Console.Write("The string \"" + s + "\" was found in text ");
+            Console.Write("The string \"{0}\" was found in text ", s);
 
             for (int i = 0; i < emptyRow; i++)
             {
@@ -101,7 +100,7 @@ namespace NauOopLab2
 
             for (int i = 0; i < emptyRow; i++)
             {
-                Console.WriteLine("Row " + i + ": " + text[i].getContent());
+                Console.WriteLine("Row {0}: {1}", i, text[i].getContent());
             }
         }
 
