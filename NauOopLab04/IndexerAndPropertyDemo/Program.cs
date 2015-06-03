@@ -18,29 +18,29 @@ namespace IndexerAndPropertyDemo
             Random rand = new Random();
 
             Console.WriteLine("ARRAY INITIALIZATION");
-            for(int i = 0; i < n*2; i++)
+            for (int i = 0; i < n * 2; i++)
             {
                 myArray[i] = rand.Next(100);
 
                 if (myArray.outOfRange)
                 {
                     Console.WriteLine("Index {0}: Value is out of range", i);
-                }           
+                }
             }
 
             Console.WriteLine("\nPRINTOUT OF ARRAY CONTENT");
-            for (int i = 0; i < n*2; i++)
+            for (int i = 0; i < n * 2; i++)
             {
                 x = myArray[i];
 
                 if (!myArray.outOfRange)
                 {
-                    Console.WriteLine("Index {0}: {1}", i, x);                   
+                    Console.WriteLine("Index {0}: {1}", i, x);
                 }
                 else
                 {
                     Console.WriteLine("Index {0}: Value is out of range", i);
-                }                
+                }
             }
 
             myArray.Size = 10;

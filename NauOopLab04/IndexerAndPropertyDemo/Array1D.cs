@@ -58,7 +58,6 @@ namespace IndexerAndPropertyDemo
                 {
                     outOfRange = true;
                 }
-
             }
         }
 
@@ -72,13 +71,12 @@ namespace IndexerAndPropertyDemo
 
             set
             {
-                if(value >= 0)
+                if (value >= 0)
                 {
                     size = value;
                     array = new int[size];
                 }
             }
         }
-
     }
 }
